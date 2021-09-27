@@ -1,0 +1,16 @@
+{
+  "name": "6",
+  "version": "1.2.0",
+  "description": "serving files",
+  "main": "main.js",
+  "scripts": {
+  "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "proMe",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "",
+    "http-status-codes": ""
+  }
+}

@@ -1,0 +1,40 @@
+*{
+    transition: .4s;
+}
+body{
+    overflow: hidden;
+    margin: 0;
+    background-color: rgba(206, 206, 206, 0.726);
+	/* display:-webkit-box;
+	-webkit-box-flex: 1;
+	-webkit-box-orient:vertical; */
+}
+h1{
+    margin: -7px 0 0 -7px;
+    text-align: center;
+    font-size: calc(2vw + 1.7em);
+    width: 100vw;
+    padding: .1em;
+}
+iframe{
+    height: 88vh;
+    vertical-align: top;
+    background-color: rgb(238, 238, 238);
+    /* border: 1px dashed black; */
+}
+iframe:first-of-type{
+    width: 10em;
+    background-color: rgba(238, 238, 238, 0);
+}
+iframe:last-of-type{
+    width: 68vw;
+    margin-left: -.49em;
+    background-color: rgba(238, 238, 238, 0);
+    /* width: calc(70vw + 7em); */
+	/* -webkit-box-flex: 1; */
+}
+@media (min-width:780px) {
+iframe:last-of-type{
+    width: 87vw;
+}  
+}

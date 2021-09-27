@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Page</title>
+</head>
+<body>
+    <pre>
+        The goal of this section is to make it easier to manage and edit your 
+        routes. If all your change might affect the others in the block.
+        Also, as your list of routes grows, you’ll find it easier to separate
+        routes based on the HTTP method used. If the /contact path can respond
+        to POST and GET requests, for example, your code will route to the
+        appropriate function as soon as the request’s method is identified.
+
+        As the main.js file grows, your ability to filter through all the code
+        you’ve written gets more complicated. You can easily find yourself with
+        hundreds of lines of code representing routes alone!
+
+        To alleviate this problem, move your routes into a new file called 
+        router.js. Also restructure the way you store and handle your routes.
+        Add the code in listing 6.5 to router.js. In the source code available at 
+        manning.com/books/get-programming-with-node-js, this code exists in a
+        new project folder called better_routes.
+
+        In this file, you define a routes object to store routes mapped to 
+        POST and GET requests. As routes are created in your main.js, they’ll 
+        be added to this routes object according to their method type (GET or POST).
+        This object doesn’t need to be accessed outside this file.
+
+        Next, create a function called handle to process the route’s callback function.
+        This function accesses the routes object by the request’s HTTP method, 
+        using routes[req.method], and then finds the corresponding callback function
+        through the request’s target URL, using [req.url]. If you make a GET request
+        for the /index.html URL path, for example, routes["GET"]["/index.html"] gives
+        you the callback function predefined in your routes object. Last, whatever 
+        callback function is found in the routes object is called and passed the request
+        and response so that you can properly respond to the client. If no route is 
+        found, respond with httpStatus.NOT_FOUND.
+
+        The handle function checks whether an incoming request matches a route in the
+        routes object by its HTTP method and URL; otherwise, it logs an error. U
+        se try-catchto attempt to route the incoming request and handle the error 
+        where the application would otherwise crash.
+
+        You also define get and post functions and add them to exports so that new
+        routes can be registered from main.js. This way, in main.js you can add new
+        callback associations, such as a /contact.html page, in the routes object by 
+        entering get("contact.html", <callbackfunction>).
+    </pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+*{
+    transition: .4s;
+}
+h1{
+    margin: -7px 0 0 -7px;
+    text-align: center;
+    font-size: calc(2vw + 1.7em);
+    width: 100vw;
+}
+a{
+    padding: 1em;
+    font-size: calc(2vh + .2em);
+    list-style-type: none;
+    display: block;
+    
+    background-color: rgba(0, 0, 0, 0.863);
+}
+a:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.719);
+}
+a{   
+    color: wheat;
+    /* color: red; */
+    /* transition: none; */
+}
+a:hover{
+    /* filter: brightness(1.4); */
+    box-shadow: 0 0 9px black;
+}
+a:active{
+    color: black;
+}
+a:link{
+    text-decoration: none;
+}
